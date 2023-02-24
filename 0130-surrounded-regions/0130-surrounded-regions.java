@@ -5,7 +5,7 @@ class Solution {
         
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                // O이면서, 외곽지점이 아닐 때 It is on the border that should not be flipped.
+                // O이면서, 마지막 bottom이 아닐 때 It is on the border that should not be flipped.
                 if (board[i][j] == 'O' && ( i == 0 || j == 0 || i == board.length -1 || j == board[0].length -1)) {
                     dfs(board, i, j);
                 }
